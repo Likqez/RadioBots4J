@@ -85,4 +85,86 @@ public class CloudCategory {
     public HttpResponse<JsonNode> getImages() {
         return provider.get("cloud/cloudserver/images").asJson();
     }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-start">https://docs.radiobots.eu/#cloud-cloudserver-action-start</a>
+     */
+    public HttpResponse<JsonNode> startServer(String uuid) {
+        return provider.post("cloud/cloudserver/action/start")
+                .header("Data", new JsonMapBuilder().addEntry("uuid", uuid).build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-shutdown">https://docs.radiobots.eu/#cloud-cloudserver-action-shutdown</a>
+     */
+    public HttpResponse<JsonNode> shutdownServer(String uuid) {
+        return provider.post("cloud/cloudserver/action/shutdown")
+                .header("Data", new JsonMapBuilder().addEntry("uuid", uuid).build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-stop">https://docs.radiobots.eu/#cloud-cloudserver-action-stop</a>
+     */
+    public HttpResponse<JsonNode> stopServer(String uuid) {
+        return provider.post("cloud/cloudserver/action/stop")
+                .header("Data", new JsonMapBuilder().addEntry("uuid", uuid).build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-restart">https://docs.radiobots.eu/#cloud-cloudserver-action-restart</a>
+     */
+    public HttpResponse<JsonNode> restartServer(String uuid) {
+        return provider.post("cloud/cloudserver/action/restart")
+                .header("Data", new JsonMapBuilder().addEntry("uuid", uuid).build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-reset">https://docs.radiobots.eu/#cloud-cloudserver-action-reset</a>
+     */
+    public HttpResponse<JsonNode> resetServer(String uuid) {
+        return provider.post("cloud/cloudserver/action/reset")
+                .header("Data", new JsonMapBuilder().addEntry("uuid", uuid).build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-reset-root-password">https://docs.radiobots.eu/#cloud-cloudserver-action-reset-root-password</a>
+     */
+    public HttpResponse<JsonNode> resetServerPassword(String uuid) {
+        return provider.post("cloud/cloudserver/action/reset_root_password")
+                .header("Data", new JsonMapBuilder().addEntry("uuid", uuid).build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-rescale">https://docs.radiobots.eu/#cloud-cloudserver-action-rescale</a>
+     */
+    public HttpResponse<JsonNode> rescaleServer(String uuid, int cores, double ram, int disk) {
+        return provider.post("cloud/cloudserver/action/rescale")
+                .header("Data",
+                        new JsonMapBuilder()
+                                .addEntry("uuid", uuid)
+                                .addEntry("cores", cores)
+                                .addEntry("ram", ram)
+                                .addEntry("disk", disk)
+                                .build())
+                .asJson();
+    }
+
+    /**
+     * @apiNote <a href="https://docs.radiobots.eu/#cloud-cloudserver-action-rebuild">https://docs.radiobots.eu/#cloud-cloudserver-action-rebuild</a>
+     */
+    public HttpResponse<JsonNode> rebuildServer(String uuid, String image) {
+        return provider.post("cloud/cloudserver/action/rebuild")
+                .header("Data",
+                        new JsonMapBuilder()
+                                .addEntry("uuid", uuid)
+                                .addEntry("image", image)
+                                .build())
+                .asJson();
+    }
 }
