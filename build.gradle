@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'team.dotspace'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_15
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+javadoc.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.konghq:unirest-java:3.11.04:standalone'
+    testCompile 'com.konghq:unirest-java:3.11.04:standalone'
+}
