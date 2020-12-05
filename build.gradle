@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'team.dotspace'
+group 'team.dotspace.radiobots'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = JavaVersion.VERSION_11
@@ -18,5 +18,4 @@ repositories {
 
 dependencies {
     compile 'com.konghq:unirest-java:3.11.04:standalone'
-    testCompile 'com.konghq:unirest-java:3.11.04:standalone'
 }
