@@ -1,8 +1,8 @@
-package team.dotspace.radiobots;
+package team.dotspace.radiobots4j;
 
-import team.dotspace.radiobots.auth.AuthCredentials;
-import team.dotspace.radiobots.category.CloudCategory;
-import team.dotspace.radiobots.http.RequestProvider;
+import team.dotspace.radiobots4j.auth.AuthCredentials;
+import team.dotspace.radiobots4j.category.CloudCategory;
+import team.dotspace.radiobots4j.http.RequestProvider;
 
 public class RadioBotsAPI {
 

@@ -1,4 +1,4 @@
-package team.dotspace.radiobots.auth;
+package team.dotspace.radiobots4j.auth;
 
 import kong.unirest.JsonObjectMapper;
 import kong.unirest.json.JSONObject;

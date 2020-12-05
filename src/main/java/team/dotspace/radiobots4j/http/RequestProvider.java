@@ -1,8 +1,8 @@
-package team.dotspace.radiobots.http;
+package team.dotspace.radiobots4j.http;
 
 import kong.unirest.Config;
 import kong.unirest.UnirestInstance;
-import team.dotspace.radiobots.auth.AuthCredentials;
+import team.dotspace.radiobots4j.auth.AuthCredentials;
 
 import java.time.Duration;
 
