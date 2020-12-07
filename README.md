@@ -6,7 +6,7 @@ Simple Java Libary for accesing the RadioBots.EU Consumer API 💜
 - [x] Cloudservers
 - [ ] Webhosting
 - [ ] Network Management
-- [ ] SSH Keys
+- [x] SSH Keys
 
 ### Contributing
 If you would like to contribute to this repository, feel free to fork the repo and then create a pull request to the current dev branch.
