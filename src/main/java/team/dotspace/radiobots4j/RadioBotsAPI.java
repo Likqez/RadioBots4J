@@ -1,6 +1,7 @@
 package team.dotspace.radiobots4j;
 
 import team.dotspace.radiobots4j.auth.AuthCredentials;
+import team.dotspace.radiobots4j.category.AccountCategory;
 import team.dotspace.radiobots4j.category.CloudCategory;
 import team.dotspace.radiobots4j.http.RequestProvider;
 
@@ -15,5 +16,9 @@ public class RadioBotsAPI {
 
     public CloudCategory cloud() {
         return new CloudCategory(this.provider);
+    }
+
+    public AccountCategory account() {
+        return new AccountCategory(this.provider);
     }
 }
